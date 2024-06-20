@@ -254,11 +254,11 @@ public class ItemRegistry {
             MOLTEN_SULFUR_BUCKET = registerItem("molten_sulfur_bucket"),  //TODO
             END_LAVA_BUCKET = registerItem("end_lava_bucket", () -> new BucketItem(FluidsMod.END_LAVA_FLUID, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))),
             ICE_BEAM = registerItem("ice_beam", () -> new IceBeam(new Item.Properties())),
-                STRONGHOLD_COMPASS = registerItem("stronghold_compass",
-                        ()-> new ItemStrongholdCompass(new Item.Properties().stacksTo(1))),
 
+        // STRONGHOLD COMPASS
+            STRONGHOLD_COMPASS = registerItem("stronghold_compass", () -> new ItemStrongholdCompass(new Item.Properties().stacksTo(1))),
 
-            //EGGS
+        //EGGS
             DUNGEON_ICE_SPAWN_EGG = registerItem("dungeon_ice_spawn_egg", () -> new ForgeSpawnEggItem(EntityRegistry.DUNGEON_ICE, 0x34dbeb, 0xFFFFFF, new Item.Properties())),
             YAK_SPAWN_EGG = registerItem("yak_spawn_egg", () -> new ForgeSpawnEggItem(EntityRegistry.YAK, 2367000, 1183757, new Item.Properties()));
 

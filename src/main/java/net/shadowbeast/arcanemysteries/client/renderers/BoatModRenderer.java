@@ -1,4 +1,4 @@
-package net.shadowbeast.arcanemysteries.client;
+package net.shadowbeast.arcanemysteries.client.renderers;
 
 import com.google.common.collect.ImmutableMap;
 import com.mojang.datafixers.util.Pair;

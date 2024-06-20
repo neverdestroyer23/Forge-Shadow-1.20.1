@@ -23,11 +23,10 @@ import net.shadowbeast.arcanemysteries.block_entities.recipes.RecipesMod;
 import net.shadowbeast.arcanemysteries.block_entities.screen.AlloyFurnaceScreen;
 import net.shadowbeast.arcanemysteries.block_entities.screen.CrusherScreen;
 import net.shadowbeast.arcanemysteries.block_entities.screen.WinterFurnaceScreen;
-import net.shadowbeast.arcanemysteries.client.BoatModRenderer;
+import net.shadowbeast.arcanemysteries.client.renderers.BoatModRenderer;
 import net.shadowbeast.arcanemysteries.enchant.EnchantmentsRegistry;
 import net.shadowbeast.arcanemysteries.entities.mobs.client.DungeonIceRenderer;
 import net.shadowbeast.arcanemysteries.entities.mobs.client.YakRenderer;
-import net.shadowbeast.arcanemysteries.events.ArcaneEvents;
 import net.shadowbeast.arcanemysteries.interfaces.ReloadListener;
 import net.shadowbeast.arcanemysteries.interfaces.ReloadListeners;
 import net.shadowbeast.arcanemysteries.items.ItemModProperties;
@@ -50,6 +49,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import terrablender.api.SurfaceRuleManager;
 
+import static net.shadowbeast.arcanemysteries.client.ClientHandler.ClientHandler.ClientHandling;
 import static net.shadowbeast.arcanemysteries.events.ArcaneEvents.addReload;
 
 @Mod(ArcaneMysteries.MOD_ID)
@@ -126,7 +126,10 @@ public class ArcaneMysteries extends MinecraftMod {
             EntityRenderers.register(EntityRegistry.YAK.get(), YakRenderer::new);
             MinecraftForge.EVENT_BUS.register(EnchantmentsRegistry.MAGNETISM.get());
 
+
             event.enqueueWork(() -> {
+                // Register the property function for the stronghold compass item
+                ClientHandling(event);
             });
         }
         @SubscribeEvent

@@ -1,4 +1,4 @@
-package net.shadowbeast.arcanemysteries.client;
+package net.shadowbeast.arcanemysteries.client.renderers;
 
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;

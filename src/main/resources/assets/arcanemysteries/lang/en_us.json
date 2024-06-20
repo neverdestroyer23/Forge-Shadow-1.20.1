@@ -317,5 +317,11 @@
   "block.arcanemysteries.tiled_purpur_pillar": "Tiled Purpur Pillar",
   "block.arcanemysteries.runic_purpur": "Runic Purpur",
   "block.arcanemysteries.end_glass": "End Glass",
-  "block.arcanemysteries.end_glass_pane": "End Glass Pane"
+  "block.arcanemysteries.end_glass_pane": "End Glass Pane",
+
+  "structurecompass.structure.locating": "Compass is locating",
+  "structurecompass.structure.notfound": "Failed to locate the structure: %s.",
+  "structurecompass.structure.found": "Structure %s found at [%s].",
+  "structurecompass.structure.unset.tooltip": "The structure compass is not set to any structure.",
+  "structurecompass.locate.fail": "Failed to locate the structure."
 }
